@@ -212,3 +212,8 @@ BOARD_SEPOLICY_DIRS += \
         $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
+
+# Default.prop overrides to get adb working at boot 
+ADDITIONAL_DEFAULT_PROPERTIES += \
+ro.secure=0 \
+ro.adb.secure=0 \
